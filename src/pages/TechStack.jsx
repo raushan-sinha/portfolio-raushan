@@ -1,4 +1,5 @@
 import CodeIcon from '@mui/icons-material/Code';
+import JavascriptIcon from '@mui/icons-material/Javascript';
 
 export default function TechStack() {
     const heading = 'Tech Stack';
@@ -56,7 +57,7 @@ export default function TechStack() {
                                     {category.tools.map((tool, i) => (
                                         <span
                                             key={i}
-                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono"
+                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono hover:bg-sky-600 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 active:bg-sky-7000"
                                         >
                                             {tool}
                                         </span>
@@ -73,7 +74,7 @@ export default function TechStack() {
                                     {category.lang.map((tool, i) => (
                                         <span
                                             key={i}
-                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono"
+                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono hover:bg-sky-600 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 active:bg-sky-700"
                                         >
                                             {tool}
                                         </span>
@@ -90,7 +91,7 @@ export default function TechStack() {
                                     {category.tools.map((tool, i) => (
                                         <span
                                             key={i}
-                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono"
+                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono hover:bg-sky-600 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 active:bg-sky-700"
                                         >
                                             {tool}
                                         </span>
@@ -107,7 +108,7 @@ export default function TechStack() {
                                     {category.tools.map((tool, i) => (
                                         <span
                                             key={i}
-                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono"
+                                            className="tools bg-slate-800 px-3 py-1 rounded-full text-sm font-mono hover:bg-sky-600 focus:outline-2 focus:outline-offset-2 focus:outline-sky-500 active:bg-sky-700"
                                         >
                                             {tool}
                                         </span>
