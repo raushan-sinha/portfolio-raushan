@@ -32,7 +32,7 @@ export default function Home() {
                         className="w-20 h-20 rounded-full object-cover border-2 border-gray-700"
                     />
                     <div>
-                        <h1 className="text-xl font-bold">{introSection.name}</h1>
+                        <h1 className="text-sm font-mono font-bold">{introSection.name}</h1>
                         <div className="flex items-center gap-2 text-gray-400 mt-1">
                             {location.icon}
                             <span className="text-sm">{location.address}</span>
