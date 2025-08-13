@@ -22,7 +22,7 @@ export default function App() {
                     </section>
                     
                     {/* Project */}
-                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
                         <Project />
                     </section>
                 </main>
