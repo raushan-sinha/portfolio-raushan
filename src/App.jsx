@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import Project from "./pages/Project";
 import TechStack from "./pages/TechStack";
 
 export default function App() {
@@ -15,8 +16,14 @@ export default function App() {
 
                 {/* Main Content */}
                 <main className="flex-1 flex flex-col gap-8">
+                    {/* Home */}
                     <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
                         <Home />
+                    </section>
+                    
+                    {/* Project */}
+                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                        <Project />
                     </section>
                 </main>
 
