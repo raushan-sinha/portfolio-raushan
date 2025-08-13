@@ -22,7 +22,7 @@ export default function Home() {
     ];
 
     return (
-        <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 max-w-4xl w-full">
+        <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-4xl">
             {/* Top Section - Image, Name, Username */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div className="flex items-center gap-4">
@@ -32,7 +32,7 @@ export default function Home() {
                         className="w-20 h-20 rounded-full object-cover border-2 border-gray-700"
                     />
                     <div>
-                        <h1 className="text-sm font-mono font-bold">{introSection.name}</h1>
+                        <p className="text-lg font-mono font-bold">{introSection.name}</p>
                         <div className="flex items-center gap-2 text-gray-400 mt-1">
                             {location.icon}
                             <span className="text-sm">{location.address}</span>
