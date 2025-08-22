@@ -1,6 +1,8 @@
 import FolderIcon from '@mui/icons-material/Folder';
 import EastIcon from '@mui/icons-material/East';
-import ProjectImage1 from '../assets/ProjectImage-1.png';
+import projectData from '../data/projectsData';
+import ViewBtn from '../buttons/ViewBtn';
+import CodeBtn from '../buttons/CodeBtn';
 
 export default function Project() {
     //todo: Icon & Heading -
@@ -12,20 +14,9 @@ export default function Project() {
         }
     ];
 
-    //todo: Project Card - 1
-    const project1 = [
-        {
-            projectImage: ProjectImage1,
-            alt: 'Project Image 1',
-            heading: 'VirtuoX - AI Assistant',
-            para: 'VirtuoX is an advanced virtual assistant powered by speech recognition and synthesis technology.',
-            viewBtn: 'View'
-        }
-    ];
-
     return (
         <>
-            <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col items-center gap-4'>
+            <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col gap-4 h-83 overflow-y-auto'>
                 {/* Header */}
                 {
                     header.map((item, idx) => (
@@ -41,30 +32,28 @@ export default function Project() {
                     ))
                 }
 
-                {/* Projects Cards */}
-                {/* Card - 1 */}
+                {/* Project Cards */}
                 {
-                    project1.map((card, idx) => (
+                    projectData.map((card, idx) => (
                         <div className="card-1 flex flex-row items-center gap-4 bg-slate-700 p-2 rounded-lg" key={idx}>
-                            {/* Image Project */}
                             <div className="image-box">
                                 <img src={card.projectImage} alt={card.alt} className='w-30 h-15 object-cover' />
                             </div>
-                            {/* Short info */}
+
                             <div className='flex flex-col items-start gap-4'>
                                 <div className="short-info">
-                                    <h2 className='font-mono text-lg underline underline-offset-4'>{card.heading}</h2>
-                                    <p className='text-sm'>{card.para}</p>
+                                    <h2 className='font-mono text-base underline underline-offset-4'>{card.heading}</h2>
+                                    <p className='text-sm font-sans'>{card.para}</p>
                                 </div>
-                                {/* Preview Button */}
-                                <button className="btn !bg-amber-300 hover:!bg-amber-200 text-black border-none">
-                                    {card.viewBtn}
-                                </button>
+
+                                <div className='flex flex-row items-center gap-2'>
+                                    <ViewBtn link={card.viewLink} />
+                                    <CodeBtn link={card.codeLink} />
+                                </div>
                             </div>
                         </div>
                     ))
                 }
-
             </section>
         </>
     );

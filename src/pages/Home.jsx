@@ -18,11 +18,11 @@ export default function Home() {
         { href: '/about', name: 'About' },
         { href: '/projects', name: 'Projects' },
         { href: '/blog', name: 'Blog' },
-        { href: '/contact', name: 'Contact' }
+        { href: '/contact', name: 'Contact' }                         
     ];
 
     return (
-        <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-4xl">
+        <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-full">
             {/* Top Section - Image, Name, Username */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div className="flex items-center gap-4">
