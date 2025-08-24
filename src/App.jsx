@@ -1,4 +1,4 @@
-// import Blog from "./pages/Blog";
+import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import TechStack from "./pages/TechStack";
@@ -22,20 +22,21 @@ export default function App() {
                         <Home />
                     </section>
 
-                    {/* Project */}
-                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
-                        <Project />
-                    </section>
+                    <div className="flex flex-row items-center gap-2">
+                        {/* Project */}
+                        <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
+                            <Project />
+                        </section>
 
-                    {/* Blog */}
-                    {/* <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
-                        <Blog />
-                    </section> */}
+                        {/* Blog */}
+                        <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
+                            <Blog />
+                        </section>
+                    </div>
                 </main>
 
             </div>
         </body>
-
     );
 }
 
