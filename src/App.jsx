@@ -1,42 +1,45 @@
-import Blog from "./pages/Blog";
+import TechStack from "./pages/TechStack";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
-import TechStack from "./pages/TechStack";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 export default function App() {
     return (
-        <body className="bg-black">
-            <div className="flex min-h-screen bg-black text-white px-10 py-8 gap-6">
+        <div className="flex min-h-screen bg-black text-white px-10 py-8 gap-4">
 
-                {/* Sidebar */}
-                <aside className="w-min flex-shrink-0 ml-4">
-                    <div className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
-                        <TechStack />
-                    </div>
-                </aside>
+            {/* Sidebar */}
+            <aside className="w-min flex-shrink-0 ml-4">
+                <div className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                    <TechStack />
+                </div>
+            </aside>
 
-                {/* Main Content */}
-                <main className="flex-1 flex flex-col gap-8">
-                    {/* Home */}
-                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
-                        <Home />
+            {/* Main Content */}
+            <main className="flex-1 flex flex-col gap-4">
+                {/* Home */}
+                <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                    <Home />
+                </section>
+
+                <div className="flex flex-row items-center gap-4">
+                    {/* Project */}
+                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
+                        <Project />
                     </section>
 
-                    <div className="flex flex-row items-center gap-2">
-                        {/* Project */}
-                        <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
-                            <Project />
-                        </section>
+                    {/* Blog */}
+                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
+                        <Blog />
+                    </section>
+                </div>
+                {/* Contact */}
+                <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                    <Contact />
+                </section>
+            </main>
 
-                        {/* Blog */}
-                        <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
-                            <Blog />
-                        </section>
-                    </div>
-                </main>
-
-            </div>
-        </body>
+        </div>
     );
 }
 

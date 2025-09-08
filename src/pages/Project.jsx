@@ -1,14 +1,15 @@
-import FolderIcon from '@mui/icons-material/Folder';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import EastIcon from '@mui/icons-material/East';
 import projectData from '../data/projectsData';
 import ViewBtn from '../buttons/ViewBtn';
 import CodeBtn from '../buttons/CodeBtn';
+import ViewProjects from '../buttons/ViewProjects';
 
 export default function Project() {
     //todo: Icon & Heading -
     const header = [
         {
-            icon: <FolderIcon fontSize='medium' />,
+            icon: <AccountTreeIcon fontSize='medium' />,
             heading: 'Projects',
             arrowIcon: <EastIcon fontSize='medium' />
         }
@@ -16,7 +17,7 @@ export default function Project() {
 
     return (
         <>
-            <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col gap-4 h-83 overflow-y-auto'>
+            <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col gap-4 h-78 overflow-y-auto'>
                 {/* Header */}
                 {
                     header.map((item, idx) => (
@@ -54,6 +55,7 @@ export default function Project() {
                         </div>
                     ))
                 }
+                <ViewProjects />
             </section>
         </>
     );

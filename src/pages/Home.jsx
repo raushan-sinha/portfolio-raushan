@@ -1,25 +1,8 @@
-import RaushanImage from '../assets/Raushan-Image.jpg';
+import { introSection, navbarLinks, shortIntro, status } from '../data/homeData';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import SocialIconsHome from '../social-icons/SocialIconsHome';
 
 export default function Home() {
-    const introSection = {
-        img: RaushanImage,
-        alt: 'Raushan Sinha Image',
-        name: 'Raushan Sinha',
-        work: 'I build ',
-        para: `Hello, I'm Raushan Sinha! A Frontend developer who builds frontend projects.`,
-        status: 'Open to build interesting projects'
-    };
-
-    const location = { icon: <LocationOnIcon fontSize="small" />, address: 'Arrah, India' };
-
-    const navbarLinks = [
-        { href: '/', name: 'Home' },
-        { href: '/about', name: 'About' },
-        { href: '/projects', name: 'Projects' },
-        { href: '/blog', name: 'Blog' },
-        { href: '/contact', name: 'Contact' }                         
-    ];
 
     return (
         <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-full">
@@ -34,8 +17,8 @@ export default function Home() {
                     <div>
                         <p className="text-lg font-mono font-bold">{introSection.name}</p>
                         <div className="flex items-center gap-2 text-gray-400 mt-1">
-                            {location.icon}
-                            <span className="text-sm">{location.address}</span>
+                            <LocationOnIcon fontSize='small' />
+                            <span className="text-sm">{introSection.address}</span>
                         </div>
                     </div>
                 </div>
@@ -57,16 +40,21 @@ export default function Home() {
             {/* Short Intro */}
             <div className="mt-4">
                 <h2 className="text-lg font-semibold">
-                    {introSection.work}
-                    <span className="text-sky-400 font-mono">Web Apps</span>
+                    {shortIntro.title} {''}
+                    <span className="text-sky-400 font-mono">{shortIntro.work}</span>
                 </h2>
-                <p className="text-gray-400 mt-1 font-mono">{introSection.para}</p>
+                <p className="text-gray-400 mt-1 font-mono">{shortIntro.para}</p>
+            </div>
+
+            {/* Social Icons */}
+            <div className="mt-4">
+                <SocialIconsHome />
             </div>
 
             {/* Status */}
             <div className="bg-[#1a1a1a] mt-4 px-3 py-2 rounded-lg flex justify-between items-center text-sm text-gray-400">
-                <span>" I know how to use AI in Frontend Projects "</span>
-                <span className="text-green-400">{introSection.status}</span>
+                <span>{status.para1}</span>
+                <span className="text-green-400">{status.para2}</span>
             </div>
         </section>
     );

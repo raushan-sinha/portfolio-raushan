@@ -7,7 +7,7 @@ export default function TechStack() {
     const frontendTools = [
         {
             heading: 'Frontend Development',
-            tools: ['JavaScript', 'React,js', 'Next.js', 'Tailwind CSS', 'Bootstrap', 'HTML5', 'CSS3']
+            tools: ['JavaScript', 'React.js', 'Next.js', 'Tailwind CSS', 'Bootstrap', 'HTML5', 'CSS3']
         }
     ];
 
@@ -39,7 +39,7 @@ export default function TechStack() {
         <>
             {/* Header */}
             <div className="text-white">
-                <aside className="sidebar bg-[#0f0f0f] border-4 border-double border-sky-800 h-max p-6 rounded-lg w-80 flex flex-col gap-1">
+                <aside className="sidebar bg-[#0f0f0f] border-4 border-double border-sky-800 h-210 p-6 rounded-lg w-80 flex flex-col gap-1">
                     <div className="header flex items-center gap-2 mb-4">
                         <div className="icon-box bg-slate-700 rounded-md p-2">
                             <CodeIcon fontSize="medium" />

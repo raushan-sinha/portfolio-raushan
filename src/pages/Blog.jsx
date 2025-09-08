@@ -3,6 +3,7 @@ import EastIcon from '@mui/icons-material/East';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import ReadBtn from '../buttons/ReadBtn';
 import blogData from '../data/blogsData';
+import ViewBlogs from '../buttons/ViewBlogs';
 
 export default function Blog() {
     //todo: Icon & Heading -
@@ -16,7 +17,7 @@ export default function Blog() {
 
     return (
         <>
-            <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-min flex flex-col gap-4 h-83 overflow-y-auto scrollbar-custom'>
+            <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-110 flex flex-col gap-4 h-78 overflow-y-auto'>
                 {
                     header.map((item, idx) => (
                         <header className='flex flex-row items-center gap-50' key={idx}>
@@ -55,7 +56,7 @@ export default function Blog() {
                         </div>
                     ))
                 }
-
+                <ViewBlogs />
             </section >
         </>
     );
