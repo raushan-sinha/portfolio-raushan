@@ -1,62 +1,61 @@
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import EastIcon from '@mui/icons-material/East';
-import projectData from '../data/projectsData';
+import { projectData } from '../data/projectsData';
 import ViewBtn from '../buttons/ViewBtn';
 import CodeBtn from '../buttons/CodeBtn';
 import ViewProjects from '../buttons/ViewProjects';
+import { useNavigate } from 'react-router-dom';
 
 export default function Project() {
-    //todo: Icon & Heading -
     const header = [
         {
-            icon: <AccountTreeIcon fontSize='medium' />,
+            icon: <AccountTreeIcon fontSize="medium" />,
             heading: 'Projects',
-            arrowIcon: <EastIcon fontSize='medium' />
+            arrowIcon: <EastIcon fontSize="medium" />
         }
     ];
 
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate('/projectPage');
+    };
+
     return (
-        <>
-            <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col gap-4 h-78 overflow-y-auto'>
-                {/* Header */}
-                {
-                    header.map((item, idx) => (
-                        <header className='flex flex-row items-center gap-50' key={idx}>
-                            <div className='flex flex-row items-center gap-2'>
-                                <div className="folderIcon bg-slate-700 rounded-md p-2">{item.icon}</div>
-                                <div className="heading text-2xl font-mono">{item.heading}</div>
-                            </div>
-                            <div>
-                                <div className="arrowIcon hover:bg-amber-900 p-1 rounded-md">{item.arrowIcon}</div>
-                            </div>
-                        </header>
-                    ))
-                }
+        <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col gap-4 h-78 overflow-y-auto">
+            {/* Header */}
+            {header.map((item, idx) => (
+                <header className="flex flex-row items-center gap-50" key={idx}>
+                    <div className="flex flex-row items-center gap-2">
+                        <div className="folderIcon bg-slate-700 rounded-md p-2">{item.icon}</div>
+                        <div className="heading text-2xl font-mono">{item.heading}</div>
+                    </div>
+                    <div>
+                        <div className="arrowIcon hover:bg-amber-900 p-1 rounded-md" onClick={handleNavigate}>{item.arrowIcon}</div>
+                    </div>
+                </header>
+            ))}
 
-                {/* Project Cards */}
-                {
-                    projectData.map((card, idx) => (
-                        <div className="card-1 flex flex-row items-center gap-4 bg-slate-700 p-2 rounded-lg" key={idx}>
-                            <div className="image-box">
-                                <img src={card.projectImage} alt={card.alt} className='w-30 h-15 object-cover' />
-                            </div>
+            {/* Project Cards */}
+            {projectData.map((card, idx) => (
+                <div className="card-1 flex flex-row items-center gap-4 bg-slate-700 p-2 rounded-lg" key={idx}>
+                    <div className="image-box">
+                        <img src={card.projectImage} alt={card.alt} className="w-30 h-15 object-cover" />
+                    </div>
 
-                            <div className='flex flex-col items-start gap-4'>
-                                <div className="short-info">
-                                    <h2 className='font-mono text-base underline underline-offset-4'>{card.heading}</h2>
-                                    <p className='text-sm font-sans'>{card.para}</p>
-                                </div>
-
-                                <div className='flex flex-row items-center gap-2'>
-                                    <ViewBtn link={card.viewLink} />
-                                    <CodeBtn link={card.codeLink} />
-                                </div>
-                            </div>
+                    <div className="flex flex-col items-start gap-4">
+                        <div className="short-info">
+                            <h2 className="font-mono text-base underline underline-offset-4">{card.heading}</h2>
+                            <p className="text-sm font-sans">{card.para}</p>
                         </div>
-                    ))
-                }
-                <ViewProjects />
-            </section>
-        </>
+
+                        <div className="flex flex-row items-center gap-2">
+                            <ViewBtn link={card.viewLink} />
+                            <CodeBtn link={card.codeLink} />
+                        </div>
+                    </div>
+                </div>
+            ))}
+            <ViewProjects onClick={handleNavigate} />
+        </section>
     );
 }

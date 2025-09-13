@@ -20,7 +20,7 @@ export default function Blog() {
             <section className='bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-110 flex flex-col gap-4 h-78 overflow-y-auto'>
                 {
                     header.map((item, idx) => (
-                        <header className='flex flex-row items-center gap-50' key={idx}>
+                        <header className='flex flex-row items-center gap-60' key={idx}>
                             <div className='flex flex-row items-center gap-2'>
                                 <div className="blogIcon bg-slate-700 rounded-md p-2">{item.icon}</div>
                                 <div className="heading text-2xl font-mono">{item.heading}</div>
