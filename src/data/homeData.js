@@ -11,7 +11,7 @@ export const introSection = {
 //todo:  Navbar Links -
 export const navbarLinks = [
     { href: '/', name: 'Home' },
-    { href: '/about', name: 'About' },
+    { href: '/aboutPage', name: 'About' },
     { href: '/projects', name: 'Projects' },
     { href: '/blog', name: 'Blog' },
     { href: '/contact', name: 'Contact' }
