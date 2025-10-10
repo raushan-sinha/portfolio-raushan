@@ -3,7 +3,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import { projectPageData, heading } from '../data/projectsData';
@@ -16,7 +15,7 @@ export default function ProjectPage() {
 
             {/* Project Heading */}
             <h1 className="text-4xl md:text-5xl font-mono text-center py-6 
-            bg-[#101923] text-white text-transparent animate-gradient-x">
+            bg-[#101923] text-white animate-gradient-x">
                 {heading}
             </h1>
 
@@ -30,7 +29,7 @@ export default function ProjectPage() {
                             boxShadow: "0 4px 20px rgba(0,0,0,0.5)",
                             borderRadius: "12px",
                         }}
-                        className="w-full sm:w-[280px] md:w-[320px] lg:w-[345px] bg-white text-black border border-2 border-cyan-600"
+                        className="w-full sm:w-[280px] md:w-[320px] lg:w-[345px] bg-white text-black border border-cyan-600"
                     >
                         <CardActionArea>
                             <CardMedia

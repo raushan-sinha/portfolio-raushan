@@ -1,42 +1,65 @@
 import React from 'react'
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
+import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        •
-    </Box>
-);
+import CardActionArea from '@mui/material/CardActionArea';
+import CardActions from '@mui/material/CardActions';
+import { blogPageData, heading } from '../data/blogsData';
+import BackToHome from '../buttons/BackToHome';
 
 export default function BlogPage() {
     return (
         <>
-            <Card sx={{ minWidth: 275 }}>
-                <CardContent>
-                    <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
-                        Word of the Day
-                    </Typography>
-                    <Typography variant="h5" component="div">
-                        be{bull}nev{bull}o{bull}lent
-                    </Typography>
-                    <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>adjective</Typography>
-                    <Typography variant="body2">
-                        well meaning and kindly.
-                        <br />
-                        {'"a benevolent smile"'}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small">Learn More</Button>
-                </CardActions>
-            </Card>
+            <BackToHome />
+
+            {/* Project Heading */}
+            <h1 className="text-4xl md:text-5xl font-mono text-center py-6 
+                        bg-[#101923] text-white animate-gradient-x">
+                {heading}
+            </h1>
+
+            <div className="min-h-screen bg-black text-white px-6 sm:px-8 md:px-10 py-8 
+                            flex flex-wrap items-center justify-center gap-6 md:gap-8">
+                {blogPageData.map((blog) => (
+                    <Card
+                        key={blog.id}
+                        sx={{
+                            maxWidth: 345,
+                            boxShadow: "0 4px 20px rgba(0,0,0,0.5)",
+                            borderRadius: "12px",
+                        }}
+                        className="w-full sm:w-[280px] md:w-[320px] lg:w-[345px] bg-white text-black border border-cyan-600"
+                    >
+                        <CardActionArea>
+                            <CardContent>
+                                <Typography
+                                    gutterBottom
+                                    variant="h5"
+                                    component="div"
+                                    className="truncate font-semibold text-lg"
+                                >
+                                    {blog.title}
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    className="text-gray-600 text-sm"
+                                >
+                                    {blog.info}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions className="flex justify-end px-4 pb-3">
+                            <a
+                                href={blog.link}
+                                className="text-blue-500 hover:text-blue-700 font-medium"
+                            >
+                                Read
+                            </a>
+                        </CardActions>
+                    </Card>
+                ))}
+            </div>
         </>
     );
 }
