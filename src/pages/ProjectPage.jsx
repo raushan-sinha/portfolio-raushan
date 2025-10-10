@@ -7,14 +7,16 @@ import Link from '@mui/material/Link';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import { projectPageData } from '../data/projectsData';
+import BackToHome from '../buttons/BackToHome';
 
 export default function ProjectPage() {
     return (
         <>
+            <BackToHome />
+
             {/* Project Heading */}
-            <h1 className="text-4xl md:text-5xl font-extrabold text-center py-6 
-                bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600 
-                bg-clip-text text-transparent animate-gradient-x">
+            <h1 className="text-4xl md:text-5xl font-mono text-center py-6 
+            bg-[#101923] text-white text-transparent animate-gradient-x">
                 Projects
             </h1>
 
@@ -28,7 +30,7 @@ export default function ProjectPage() {
                             boxShadow: "0 4px 20px rgba(0,0,0,0.5)",
                             borderRadius: "12px",
                         }}
-                        className="w-full sm:w-[280px] md:w-[320px] lg:w-[345px] bg-white text-black"
+                        className="w-full sm:w-[280px] md:w-[320px] lg:w-[345px] bg-white text-black border border-2 border-cyan-600"
                     >
                         <CardActionArea>
                             <CardMedia
@@ -36,7 +38,7 @@ export default function ProjectPage() {
                                 height="180"
                                 image={project.img}
                                 alt={project.alt}
-                                className="rounded-t-lg"
+                                className="rounded-t-lg z-100"
                             />
                             <CardContent>
                                 <Typography

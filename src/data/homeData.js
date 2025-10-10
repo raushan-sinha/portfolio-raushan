@@ -12,7 +12,7 @@ export const introSection = {
 export const navbarLinks = [
     { href: '/', name: 'Home' },
     { href: '/aboutPage', name: 'About' },
-    { href: '/projects', name: 'Projects' },
+    { href: '/projectPage', name: 'Projects' },
     { href: '/blog', name: 'Blog' },
     { href: '/contact', name: 'Contact' }
 ];
