@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProjectPage from "./pages/ProjectPage";
 import AboutPage from "./pages/AboutPage";
+import BlogPage from "./pages/BlogPage";
 
 export default function App() {
     return (
@@ -54,6 +55,7 @@ export default function App() {
                 {/* Project Page → standalone (no sidebar, no home/blog/contact) */}
                 <Route path="/projectPage" element={<ProjectPage />} />
                 <Route path='/aboutPage' element={<AboutPage />} />
+                <Route path="/blogPage" element={<BlogPage />} />
             </Routes>
         </BrowserRouter>
     );

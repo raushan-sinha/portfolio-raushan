@@ -2,8 +2,9 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import EastIcon from '@mui/icons-material/East';
 import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import ReadBtn from '../buttons/ReadBtn';
-import blogData from '../data/blogsData';
+import { blogData } from '../data/blogsData';
 import ViewBlogs from '../buttons/ViewBlogs';
+import { useNavigate } from 'react-router-dom';
 
 export default function Blog() {
     //todo: Icon & Heading -
@@ -14,6 +15,12 @@ export default function Blog() {
             arrowIcon: <EastIcon fontSize='medium' />
         }
     ];
+
+    //todo: Open Blogs page -
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate('/blogPage');
+    }
 
     return (
         <>
@@ -26,7 +33,7 @@ export default function Blog() {
                                 <div className="heading text-2xl font-mono">{item.heading}</div>
                             </div>
                             <div>
-                                <div className="arrowIcon hover:bg-amber-900 p-1 rounded-md">{item.arrowIcon}</div>
+                                <div className="arrowIcon hover:bg-amber-900 p-1 rounded-md" onClick={handleNavigate}>{item.arrowIcon}</div>
                             </div>
                         </header>
                     ))
@@ -56,7 +63,7 @@ export default function Blog() {
                         </div>
                     ))
                 }
-                <ViewBlogs />
+                <ViewBlogs onClick={handleNavigate} />
             </section >
         </>
     );

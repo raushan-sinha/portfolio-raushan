@@ -1,4 +1,4 @@
-const blogData = [
+export const blogData = [
     {
         title: 'Future of Artificial Intelligence',
         info: 'The Future of AI will likely be a balance between innovation and regulation.',
@@ -11,4 +11,10 @@ const blogData = [
     }
 ];
 
-export default blogData;
+//todo: Heading
+export const heading = 'Blogs';
+
+//todo: Data for Blogs page - 
+export const blogPageData = [
+
+];

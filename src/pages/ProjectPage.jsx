@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
-import { projectPageData } from '../data/projectsData';
+import { projectPageData, heading } from '../data/projectsData';
 import BackToHome from '../buttons/BackToHome';
 
 export default function ProjectPage() {
@@ -17,7 +17,7 @@ export default function ProjectPage() {
             {/* Project Heading */}
             <h1 className="text-4xl md:text-5xl font-mono text-center py-6 
             bg-[#101923] text-white text-transparent animate-gradient-x">
-                Projects
+                {heading}
             </h1>
 
             <div className="min-h-screen bg-black text-white px-6 sm:px-8 md:px-10 py-8 
