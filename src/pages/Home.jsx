@@ -53,7 +53,7 @@ export default function Home() {
 
             {/* Status */}
             <div className="bg-[#1a1a1a] mt-4 px-3 py-2 rounded-lg flex justify-between items-center text-sm text-gray-400">
-                <span>{status.para1}</span>
+                <span className='text-amber-500'>{status.para1}</span>
                 <span className="text-green-400">{status.para2}</span>
             </div>
         </section>
