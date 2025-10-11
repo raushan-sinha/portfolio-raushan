@@ -13,7 +13,7 @@ export default function BlogPage() {
         <>
             <BackToHome />
 
-            {/* Project Heading */}
+            {/* Blog Heading */}
             <h1 className="text-4xl md:text-5xl font-mono text-center py-6 
                         bg-[#101923] text-white animate-gradient-x">
                 {heading}

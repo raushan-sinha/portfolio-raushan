@@ -14,7 +14,7 @@ export const navbarLinks = [
     { href: '/aboutPage', name: 'About' },
     { href: '/projectPage', name: 'Projects' },
     { href: '/blogPage', name: 'Blog' },
-    { href: '/contact', name: 'Contact' }
+    { href: '/contactPage', name: 'Contact' }
 ];
 
 
