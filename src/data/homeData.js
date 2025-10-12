@@ -10,10 +10,10 @@ export const introSection = {
 
 //todo:  Navbar Links -
 export const navbarLinks = [
-    { href: '/', name: 'Home' },
-    { href: '/aboutPage', name: 'About' },
-    { href: '/projectPage', name: 'Projects' },
-    { href: '/blogPage', name: 'Blog' },
+    { href: '/', name: 'Home |' },
+    { href: '/aboutPage', name: 'About |' },
+    { href: '/projectPage', name: 'Projects |' },
+    { href: '/blogPage', name: 'Blog |' },
     { href: '/contactPage', name: 'Contact' }
 ];
 

@@ -33,7 +33,11 @@ export default function ContactPage() {
             });
             const result = await response.json();
             if (result.success) {
-                setFormResult(`Message sent successfully! Thanks ${name} for contacting me.`);
+                setFormResult(
+                    <p>
+                        Message sent successfully! Thanks <span className='font-mono font-bold'>{name}</span> for contacting me.
+                    </p>
+                );
                 setName('');
                 setEmail('');
                 setMessage('');
@@ -126,7 +130,7 @@ export default function ContactPage() {
                         </button>
 
                         {formResult && (
-                            <Alert severity="info" className="mt-4">
+                            <Alert variant="filled" severity="info" className="mt-4">
                                 {formResult}
                             </Alert>
                         )}
