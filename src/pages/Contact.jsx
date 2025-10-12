@@ -5,6 +5,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import { socialLinks } from '../data/socialLinksData';
+import { useNavigate } from 'react-router-dom';
 
 export default function Contact() {
     //todo: Icon & Heading -
@@ -14,6 +15,12 @@ export default function Contact() {
             heading: 'Contact'
         }
     ];
+
+    //todo: Contact Page -
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate('/contactPage');
+    }
 
     return (
         <>
@@ -34,7 +41,7 @@ export default function Contact() {
                     {/* Queries & Email */}
                     <div className='flex flex-row items-center gap-4'>
                         <div>
-                            <Button variant="outlined" className='whitespace-nowrap'> Collaborate with Me</Button>
+                            <Button variant="outlined" className='whitespace-nowrap' onClick={handleNavigate}> Collaborate with Me</Button>
                         </div>
                         <div>
                             <Button variant="outlined" color="error" onClick={() => window.open(socialLinks.email)} className='whitespace-nowrap'>Email Me</Button>
