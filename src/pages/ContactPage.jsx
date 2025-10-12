@@ -18,8 +18,11 @@ export default function ContactPage() {
         }
 
         //TODO: Form submission logic here (e.g., send data to a server) -
-        //access key - 5fecc6e9-0eda-423f-ba7a-2ae89e021c61
-        setFormResult('Sending...');
+        setFormResult(
+            <Alert variant="filled" severity="info" className='mt-4'>
+                Sending...
+            </Alert>
+        );
         const formData = new FormData();
         formData.append('name', name);
         formData.append('email', email);
@@ -34,7 +37,7 @@ export default function ContactPage() {
             const result = await response.json();
             if (result.success) {
                 setFormResult(
-                    <Alert variant="filled" severity="info" className="mt-4">
+                    <Alert Alert variant="filled" severity="success" className="mt-4">
                         Message sent successfully! Thanks <span className='font-mono font-bold'>{name}</span> for contacting me.
                     </Alert>
                 );
@@ -46,7 +49,7 @@ export default function ContactPage() {
             }
         } catch (error) {
             setFormResult(
-                <Alert severity="warning"> An error occurred while sending the message.</Alert>
+                <Alert severity="warning" className="mt-4"> An error occurred while sending the message.</Alert>
             );
             console.error(error);
         }
@@ -121,6 +124,12 @@ export default function ContactPage() {
                                 autoComplete='usermessage'
                                 onChange={(e) => setMessage(e.target.value)}
                                 value={message}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        e.preventDefault();
+                                        handleSubmit(e);
+                                    }
+                                }}
                             />
                         </div>
 
