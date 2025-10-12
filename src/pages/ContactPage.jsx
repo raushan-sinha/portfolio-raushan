@@ -34,9 +34,9 @@ export default function ContactPage() {
             const result = await response.json();
             if (result.success) {
                 setFormResult(
-                    <p>
+                    <Alert variant="filled" severity="info" className="mt-4">
                         Message sent successfully! Thanks <span className='font-mono font-bold'>{name}</span> for contacting me.
-                    </p>
+                    </Alert>
                 );
                 setName('');
                 setEmail('');
@@ -45,7 +45,9 @@ export default function ContactPage() {
                 setFormResult(result.message || 'Something went wrong!');
             }
         } catch (error) {
-            setFormResult('An error occurred while sending the message.');
+            setFormResult(
+                <Alert severity="warning"> An error occurred while sending the message.</Alert>
+            );
             console.error(error);
         }
 
@@ -129,11 +131,7 @@ export default function ContactPage() {
                             Send Message
                         </button>
 
-                        {formResult && (
-                            <Alert variant="filled" severity="info" className="mt-4">
-                                {formResult}
-                            </Alert>
-                        )}
+                        {formResult}
 
                     </form>
                 </div>
