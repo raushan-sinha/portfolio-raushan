@@ -17,9 +17,9 @@ export default function App() {
                 <Route
                     path="/"
                     element={
-                        <div className="flex min-h-screen bg-black text-white px-10 py-8 gap-4">
+                        <div className="flex max-w bg-black text-white px-10 py-8 gap-4">
                             {/* Sidebar */}
-                            <aside className="w-min flex-shrink-0 ml-4">
+                            <aside className="w-min flex-shrink-0">
                                 <div className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
                                     <TechStack />
                                 </div>
