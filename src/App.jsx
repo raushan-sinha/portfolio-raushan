@@ -17,38 +17,40 @@ export default function App() {
                 <Route
                     path="/"
                     element={
-                        <div className="flex max-w bg-black text-white px-10 py-8 gap-4">
-                            {/* Sidebar */}
-                            <aside className="w-min flex-shrink-0">
-                                <div className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
-                                    <TechStack />
-                                </div>
-                            </aside>
+                        <div>
+                            <div className="max-w-[2000px] flex bg-black text-white px-10 py-8 gap-4">
+                                {/* Sidebar */}
+                                <aside className="w-min flex-shrink-0">
+                                    <div className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                                        <TechStack />
+                                    </div>
+                                </aside>
 
-                            {/* Main Content */}
-                            <main className="flex-1 flex flex-col gap-4">
-                                {/* Home */}
-                                <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
-                                    <Home />
-                                </section>
-
-                                <div className="flex flex-row items-center gap-4">
-                                    {/* Project */}
-                                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
-                                        <Project />
+                                {/* Main Content */}
+                                <main className="flex-1 flex flex-col gap-4">
+                                    {/* Home */}
+                                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                                        <Home />
                                     </section>
 
-                                    {/* Blog */}
-                                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
-                                        <Blog />
-                                    </section>
-                                </div>
+                                    <div className="flex flex-row items-center gap-4">
+                                        {/* Project */}
+                                        <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
+                                            <Project />
+                                        </section>
 
-                                {/* Contact */}
-                                <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
-                                    <Contact />
-                                </section>
-                            </main>
+                                        {/* Blog */}
+                                        <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800 w-min">
+                                            <Blog />
+                                        </section>
+                                    </div>
+
+                                    {/* Contact */}
+                                    <section className="bg-[#0f0f0f] rounded-xl shadow-lg border border-gray-800">
+                                        <Contact />
+                                    </section>
+                                </main>
+                            </div>
                         </div>
                     }
                 />
