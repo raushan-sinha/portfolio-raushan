@@ -1,6 +1,5 @@
-import React from 'react';
 import { aboutData } from '../data/aboutData';
-import BackToHome from '../buttons/BackToHome';
+import BackToHome from '../components/BackToHome';
 
 export default function AboutPage() {
     return (
@@ -9,12 +8,10 @@ export default function AboutPage() {
 
             <div className="bg-[#101923] text-white min-h-screen flex items-center justify-center px-6 py-20">
                 <div className="max-w-5xl w-full bg-[#1a2537] rounded-2xl shadow-lg p-8 md:p-12">
-                    {/* Header */}
                     <h1 className="text-3xl md:text-5xl font-bold text-cyan-400 mb-8 text-center">
                         About Me
                     </h1>
 
-                    {/* Intro Section */}
                     <p className="text-gray-300 text-base md:text-lg mb-6 leading-relaxed text-justify">
                         Hi, I’m <span className="text-cyan-400 font-semibold">Raushan Sinha</span>,
                         a passionate <span className="text-cyan-400 font-semibold">Frontend Developer </span>
@@ -43,18 +40,15 @@ export default function AboutPage() {
                         <span className="text-cyan-400"> CodeTech Lab</span>.
                     </p>
 
-                    {/* Skills Section */}
                     <div className="grid sm:grid-cols-2 gap-4 text-gray-200">
-                        {
-                            aboutData.map((item) => (
-                                <div className="bg-[#131b28] p-5 rounded-xl border border-cyan-600 shadow-md" key={item.id}>
-                                    <h3 className="text-lg font-semibold text-cyan-400 mb-2">{item.title}</h3>
-                                    <p className="text-sm md:text-base">
-                                        {item.skills}
-                                    </p>
-                                </div>
-                            ))
-                        }
+                        {aboutData.map((item) => (
+                            <div className="bg-[#131b28] p-5 rounded-xl border border-cyan-600 shadow-md" key={item.id}>
+                                <h3 className="text-lg font-semibold text-cyan-400 mb-2">{item.title}</h3>
+                                <p className="text-sm md:text-base">
+                                    {item.skills}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
