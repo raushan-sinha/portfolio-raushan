@@ -56,7 +56,7 @@ export default function Blog() {
             ))}
 
             <Stack direction="row" spacing={2}>
-                <Button variant="outlined" className="w-full text-center !text-amber-300" onClick={handleNavigate}>
+                <Button variant="outlined" className="w-full text-center text-amber-300!" onClick={handleNavigate}>
                     View Blogs
                 </Button>
             </Stack>
