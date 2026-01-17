@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Scroll behavior */
 .scroll-container::-webkit-scrollbar {
     width: 8px;
 }
