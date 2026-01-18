@@ -1,18 +1,8 @@
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import RaushanImage from '../assets/Raushan-Image.jpg';
 import SocialIcons from '../components/SocialIcons';
-import { useEffect, useState } from 'react';
 
 export default function Profile() {
-    const [dot, setDot] = useState('');
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setDot((prev) => setDot(prev.length === 3 ? '-' : prev + '-'));
-        }, 500);
-
-        return () => { clearInterval(interval) }
-    }, []);
 
     return (
         <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-full">
@@ -55,9 +45,12 @@ export default function Profile() {
             </div>
 
             <div className="bg-[#1a1a1a] mt-4 px-3 py-2 rounded-lg flex lg:justify-between items-center text-sm text-gray-400 flex-col lg:flex-row w-full gap-4">
-                <span className="text-amber-500">
-                    Working on {dot} Web & AI
-                </span>
+                <div className="flex flex-row gap-1">
+                    <span className='text-amber-500 text-base'>*</span>
+                    <span className="text-amber-500">
+                        Working on Web & AI
+                    </span>
+                </div>
 
                 <div className='flex flex-row justify-center items-center gap-0.5'>
                     <span className='text-green-500 text-base'>#</span>
