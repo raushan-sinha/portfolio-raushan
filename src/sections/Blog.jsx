@@ -14,10 +14,10 @@ export default function Blog() {
     }
 
     return (
-        <section className="scroll-container rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 flex flex-col gap-4 h-78 overflow-y-auto bg-[#0f0f0f] lg:w-min w-full">
+        <section className="scroll-container rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 flex flex-col gap-4 h-78 overflow-y-auto lg:w-min w-full">
             <header className="flex flex-row items-center lg:gap-60 justify-between">
                 <div className="flex flex-row items-center gap-2">
-                    <div className="bg-slate-700 rounded-md p-2">
+                    <div className="bg-slate-700 text-white rounded-md p-2">
                         <MenuBookIcon fontSize="medium" />
                     </div>
 
@@ -32,7 +32,7 @@ export default function Blog() {
             </header>
 
             {blogData.map((item, idx) => (
-                <div className="flex flex-col items-start gap-8 bg-slate-700 p-2 rounded-lg" key={idx}>
+                <div className="flex flex-col items-start gap-8 bg-slate-700 text-white p-2 rounded-lg" key={idx}>
                     <div className="flex flex-col items-center gap-4">
                         <div className="flex flex-row gap-4">
                             <TextSnippetIcon />
@@ -56,7 +56,7 @@ export default function Blog() {
             ))}
 
             <Stack direction="row" spacing={2}>
-                <Button variant="outlined" className="w-full text-center text-amber-300!" onClick={handleNavigate}>
+                <Button variant="outlined" className="w-full text-center text-amber-600!" onClick={handleNavigate}>
                     View Blogs
                 </Button>
             </Stack>

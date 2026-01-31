@@ -15,9 +15,9 @@ export default function Contact() {
     };
 
     return (
-        <section className="bg-[#0f0f0f] rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col gap-4 h-fit">
+        <section className="rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 min-w-min flex flex-col gap-4 h-fit">
             <header className="flex flex-row items-center gap-2">
-                <div className="folderIcon bg-slate-700 rounded-md p-2">
+                <div className="folderIcon bg-slate-700 text-white rounded-md p-2">
                     <ChatBubbleIcon fontSize="medium" />
                 </div>
 

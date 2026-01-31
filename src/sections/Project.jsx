@@ -13,10 +13,10 @@ export default function Project() {
     };
 
     return (
-        <section className="scroll-container bg-[#0f0f0f] rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 lg:w-min flex flex-col gap-4 h-78 overflow-y-auto w-full">
+        <section className="scroll-container rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 lg:w-min flex flex-col gap-4 h-78 overflow-y-auto w-full">
             <header className="flex flex-row items-center lg:gap-50 justify-between">
                 <div className="flex flex-row items-center gap-2">
-                    <div className="bg-slate-700 rounded-md p-2">
+                    <div className="bg-slate-700 text-white rounded-md p-2">
                         <AccountTreeIcon fontSize="medium" />
                     </div>
 
@@ -31,7 +31,7 @@ export default function Project() {
             </header>
 
             {projectData.map((card, idx) => (
-                <div className="flex lg:flex-row items-center gap-4 bg-slate-700 p-4 rounded-lg flex-col" key={idx}>
+                <div className="flex lg:flex-row items-center gap-4 bg-slate-700 text-white p-4 rounded-lg flex-col" key={idx}>
                     <img src={card.projectImage} alt={card.alt} className="w-30 h-15 object-cover" />
 
                     <div className="flex flex-col items-start gap-4">
@@ -60,7 +60,7 @@ export default function Project() {
 
 
             <Stack direction="row" spacing={2}>
-                <Button variant="outlined" className="w-full text-center !text-amber-300" onClick={handleNavigate}>
+                <Button variant="outlined" className="w-full text-center text-amber-300" onClick={handleNavigate}>
                     View Projects
                 </Button>
             </Stack>
