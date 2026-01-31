@@ -3,10 +3,14 @@ import Profile from '../sections/Profile';
 import Project from '../sections/Project';
 import Blog from '../sections/Blog';
 import Contact from '../sections/Contact';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 export default function Portfolio() {
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <div className="bg-black text-white">
+        <div className={`${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
             <div className="px-10 py-8 gap-5 hidden lg:flex">
                 <TechStack />
 
