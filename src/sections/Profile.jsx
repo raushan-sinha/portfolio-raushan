@@ -1,12 +1,16 @@
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import RaushanImage from '../assets/Raushan-Image.jpg';
 import SocialIcons from '../components/SocialIcons';
+import { DarkMode, Sunny } from '@mui/icons-material';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 export default function Profile() {
+    const { theme, setTheme } = useContext(ThemeContext);
 
     return (
-        <section className="bg-[#0f0f0f] text-white rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-full">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <section className="rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 w-full">
+            <div className="flex flex-row justify-between sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-4">
                     <img src={RaushanImage} alt="Raushan Sinha Image" className="w-20 h-20 rounded-full object-cover border-2 border-gray-700" />
 
@@ -24,6 +28,10 @@ export default function Profile() {
                         </div>
                     </div>
                 </div>
+
+                <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className='cursor-pointer'>
+                    {theme === 'dark' ? <Sunny /> : <DarkMode />}
+                </button>
             </div>
 
             <div className="mt-4">
@@ -44,17 +52,17 @@ export default function Profile() {
                 <SocialIcons />
             </div>
 
-            <div className="bg-[#1a1a1a] mt-4 px-3 py-2 rounded-lg flex lg:justify-between items-center text-sm text-gray-400 flex-col lg:flex-row w-full gap-4">
+            <div className="border-2 border-amber-400 mt-4 px-3 py-2 rounded-lg flex lg:justify-between items-center text-sm text-gray-400 flex-col lg:flex-row w-full gap-4">
                 <div className="flex flex-row gap-1">
-                    <span className='text-amber-500 text-base'>*</span>
-                    <span className="text-amber-500">
+                    <span className='text-amber-600 text-base'>*</span>
+                    <span className="text-amber-600">
                         Working on Web & AI
                     </span>
                 </div>
 
                 <div className='flex flex-row justify-center items-center gap-0.5'>
-                    <span className='text-green-500 text-base'>#</span>
-                    <span className="text-green-400">
+                    <span className='text-green-600 text-base'>#</span>
+                    <span className="text-green-600">
                         Open to contribute in companies / startups project
                     </span>
                 </div>
