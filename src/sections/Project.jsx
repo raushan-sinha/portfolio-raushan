@@ -13,7 +13,7 @@ export default function Project() {
     };
 
     return (
-        <section className="scroll-container rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 lg:w-min flex flex-col gap-4 h-78 overflow-y-auto w-full">
+        <section className="custom-scrollbar scroll-container rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 lg:w-min flex flex-col gap-4 h-78 overflow-y-auto w-full">
             <header className="flex flex-row items-center lg:gap-50 justify-between">
                 <div className="flex flex-row items-center gap-2">
                     <div className="bg-slate-700 text-white rounded-md p-2">

@@ -14,7 +14,7 @@ export default function Blog() {
     }
 
     return (
-        <section className="scroll-container rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 flex flex-col gap-4 h-78 overflow-y-auto lg:w-min w-full">
+        <section className="custom-scrollbar scroll-container rounded-xl shadow-lg p-6 border-4 border-double border-sky-800 flex flex-col gap-4 h-78 overflow-y-auto lg:w-min w-full">
             <header className="flex flex-row items-center lg:gap-60 justify-between">
                 <div className="flex flex-row items-center gap-2">
                     <div className="bg-slate-700 text-white rounded-md p-2">
